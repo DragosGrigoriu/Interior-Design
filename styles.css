@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background: #f3f0e8;
+  background: #e9e3d5;
   color: #262626;
 }
 
@@ -58,10 +58,10 @@ body {
 }
 
 .main-wrap .main-head .main-nav .navbar .navbar-nav .nav-list {
-  text-align: left;
+  text-align: right;
   font-size: 22px;
   list-style: none;
-  padding-left: 45px;
+  padding-right: 45px;
 }
 
 .main-wrap .main-head .main-nav .navbar .navbar-nav .nav-list li {
@@ -145,6 +145,59 @@ body {
   font-size: 15px;
 }
 
+/* Process */
+
+.process-column {
+  display: flex;
+}
+
+.column1 {
+  flex: 50%;
+  padding-left: 200px;
+
+  padding-right: 50px;
+}
+
+.column2 {
+  flex: 50%;
+  padding-left: 200px;
+  padding-right: 50px;
+}
+
+.column2 ol {
+  counter-reset: list-counter 6;
+}
+
+.process h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 1;
+  margin-bottom: 50px;
+}
+.process-list ol {
+  list-style-type: none;
+}
+
+.process-list ol > li {
+  counter-increment: list-counter;
+  margin-bottom: 10px;
+}
+
+.process-list ol > li::before {
+  content: counter(list-counter) ".";
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.process-list ul {
+  margin-top: 0;
+  padding-left: 20px;
+}
+
+.process-list ul li {
+  list-style-type: disc;
+}
+
 /* Feedback */
 
 .feedback {
@@ -165,6 +218,8 @@ body {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-bottom: 2rem;
+  padding-right: 35px;
+  padding-left: 35px;
 }
 
 .card {
@@ -183,12 +238,18 @@ body {
 
 .card i {
   font-size: 2.5rem;
-  color: gold;
+  background: linear-gradient(45deg, #ffd700, #daa520);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .card p {
+  font-style: italic;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 300;
   color: #262626;
 }
 
@@ -198,8 +259,10 @@ body {
 }
 
 .card .name {
+  font-style: normal;
+  font-family: "Poppins", sans-serif;
   font-size: 0.9rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #262626;
   transition: 0.3s;
 }
@@ -287,4 +350,108 @@ body {
 
 .work-grid-img:hover .image-container .layer {
   height: 10%;
+}
+
+/* Contact */
+
+#contact h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 1;
+  margin-bottom: 50px;
+}
+
+.contact-left {
+  flex-basis: 40%;
+}
+
+.contact-right {
+  flex-basis: 55%;
+}
+
+.contact-left {
+  margin-top: 9px;
+}
+
+.contact-text {
+  font-size: 20px;
+  text-align: justify;
+}
+
+.contact-details {
+  margin-top: 77px;
+}
+
+.contact-details2 {
+  margin-bottom: 30px;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.contact-left p i {
+  color: #262626;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 28px;
+  margin-right: 38px;
+  color: #262626;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: #ababab;
+  transform: translateY(-5px);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: #fff;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #fff;
+  padding: 15px;
+  margin: 15px 0;
+  color: #262626;
+  font-size: 18px;
+}
+
+form .btn {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+/* Copyright */
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  padding: 25px 0;
+  background: #f3f0e8;
+  font-weight: 300;
+  margin-top: 20px;
+}
+
+.gotop2 {
+  display: none;
 }
