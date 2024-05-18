@@ -23,6 +23,8 @@ body {
   display: flex;
 }
 
+/* Nav Bar */
+
 .main-wrap .main-head {
   width: 300px;
   padding: 30px 0;
@@ -46,7 +48,7 @@ body {
 }
 
 .main-wrap .main-head .main-nav .navbar .navbar-nav .title {
-  height: 550px;
+  height: 520px;
 }
 
 .main-wrap .main-head .main-nav .navbar .navbar-nav .title h2 {
@@ -58,10 +60,9 @@ body {
 }
 
 .main-wrap .main-head .main-nav .navbar .navbar-nav .nav-list {
-  text-align: right;
+  text-align: center;
   font-size: 22px;
   list-style: none;
-  padding-right: 45px;
 }
 
 .main-wrap .main-head .main-nav .navbar .navbar-nav .nav-list li {
@@ -81,12 +82,15 @@ body {
   box-sizing: border-box;
 }
 
+/* Right side content */
+
+/* Home */
+
 .home {
   background: url(images2/background.png);
   width: 100%;
   height: 100vh;
   background-size: cover;
-  background-position: center;
 }
 
 .line {
@@ -147,6 +151,18 @@ body {
 
 /* Process */
 
+#process {
+  font-size: 20px;
+}
+
+.steps {
+  font-weight: bold;
+}
+
+ul {
+  font-weight: normal;
+}
+
 .process-column {
   display: flex;
 }
@@ -154,14 +170,14 @@ body {
 .column1 {
   flex: 50%;
   padding-left: 200px;
-
-  padding-right: 50px;
+  text-align: justify;
 }
 
 .column2 {
-  flex: 50%;
+  flex: 60%;
   padding-left: 200px;
-  padding-right: 50px;
+  padding-right: 80px;
+  text-align: justify;
 }
 
 .column2 ol {
@@ -198,6 +214,64 @@ body {
   list-style-type: disc;
 }
 
+/* Services */
+
+#services h1 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 1;
+  margin-bottom: 50px;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+}
+
+.services-left {
+  flex: 50%;
+  font-weight: bold;
+}
+
+.services-left {
+  text-align: center;
+}
+
+.services-list {
+  display: inline-block;
+  text-align: left;
+}
+
+.services-list .p2 {
+  padding-top: 82px;
+}
+.services-list .p3 {
+  padding-top: 82px;
+}
+.services-list .p4 {
+  padding-top: 82px;
+}
+.services-list .p5 {
+  padding-top: 62px;
+}
+.services-list .p6 {
+  padding-top: 61px;
+}
+.services-list .p7 {
+  padding-top: 42px;
+}
+
+.services-details {
+  flex: 50%;
+  font-size: 17.5px;
+  padding-right: 35px;
+  text-align: justify;
+}
+
+.services-details p {
+  margin-bottom: 20px;
+}
+
 /* Feedback */
 
 .feedback {
@@ -214,8 +288,8 @@ body {
 
 .feedback-grid {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-bottom: 2rem;
   padding-right: 35px;
@@ -224,7 +298,7 @@ body {
 
 .card {
   padding: 2rem;
-  display: grid;
+  display: flex;
   gap: 1rem;
   background: #fff;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
@@ -301,7 +375,7 @@ body {
 }
 
 .work-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 50px;
   margin-top: 30px;
@@ -363,10 +437,12 @@ body {
 
 .contact-left {
   flex-basis: 40%;
+  padding-left: 35px;
 }
 
 .contact-right {
   flex-basis: 55%;
+  padding-right: 35px;
 }
 
 .contact-left {
@@ -454,4 +530,16 @@ form .btn {
 
 .gotop2 {
   display: none;
+}
+
+/* CSS for small screen */
+
+@media screen and (max-width: 768px) {
+  .main-wrap .main-head {
+    display: none;
+  }
+
+  .main-wrap {
+    display: block;
+  }
 }
