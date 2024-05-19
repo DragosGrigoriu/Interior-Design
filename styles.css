@@ -298,7 +298,7 @@ ul {
 
 .card {
   padding: 2rem;
-  display: flex;
+  display: grid;
   gap: 1rem;
   background: #fff;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
@@ -535,11 +535,4 @@ form .btn {
 /* CSS for small screen */
 
 @media screen and (max-width: 768px) {
-  .main-wrap .main-head {
-    display: none;
-  }
-
-  .main-wrap {
-    display: block;
-  }
 }
